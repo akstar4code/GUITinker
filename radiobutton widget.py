@@ -1,0 +1,16 @@
+from tkinter import*
+root = Tk()
+root.title('Radiobutton Widget')
+root.geometry('300x400+800+80')
+var = IntVar()
+def selections():
+    selection = "You selected the option " + str(var.get())
+    l1.config(text=selection)
+label =Label(root,text='Choose the best Programming Language : ').pack()
+rbtn1 = Radiobutton(root,text='Java',variable=var,value=1,command=selections).pack()
+rbtn2 = Radiobutton(root,text='C++',value=2,variable=var,command=selections).pack()
+rbtn3 = Radiobutton(root,text='Python3',value=3,variable=var,command=selections).pack()
+rbtn4 = Radiobutton(root,text='R',value=4,variable=var,command=selections).pack()
+l1 = Label(root)
+l1.pack()
+root.mainloop()

@@ -1,0 +1,18 @@
+from tkinter import*
+root =Tk()
+root.title('Main Window')
+root.geometry('300x400+200+80')
+def open_():
+    top_win = Toplevel()
+    top_win.title('Toplevel Widget')
+    top_win.geometry('300x200+300+150')
+    label = Label(top_win,text='Hello Toplevel Widget').pack()
+    top_win.mainloop()
+menubar = Menu(root)
+file = Menu(menubar,tearoff=0)
+file.add_command(label='New',command=open_)
+file.add_command(label='Save')
+file.add_command(label='Save As')
+menubar.add_cascade(label='File',menu=file)
+root.config(menu=menubar)
+root.mainloop()

@@ -1,0 +1,11 @@
+from tkinter import*
+root = Tk()
+root.title('Frame Widget')
+root.geometry('300x400')
+frame1 = Frame(root).place(x=50,y=50)
+frame2 = Frame(root).place(x=150,y=150)
+x1key = Button(frame1,text='8',width=6,height=1).place(x=230,y=140)
+x2key = Button(frame1,text='9',width=6,height=1).place(x=25,y=175)
+y1key = Button(frame2,text='0',width=6,height=1).place(x=90,y=175)
+y2key = Button(frame2,text='0',width=6,height=1).place(x=105,y=17)
+root.mainloop()
